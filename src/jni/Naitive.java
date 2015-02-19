@@ -7,4 +7,6 @@ public class Naitive {
 	}
 	
 	public static native int addValue(int value1, int value2);
+	
+	public static native int[] getArray(int size); 
 }

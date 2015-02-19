@@ -28,8 +28,12 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				int value = Naitive.addValue(1, 2);
-				t.setText("" + value);
+				int[] value = Naitive.getArray(6);
+				StringBuilder sb = new StringBuilder();
+				for(int i:value){
+					sb.append(i + ",");
+				}
+				t.setText(sb.toString());
 			}
 		});
         
