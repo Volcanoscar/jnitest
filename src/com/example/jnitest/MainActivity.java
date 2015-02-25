@@ -11,9 +11,6 @@ import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
-
-	private Button b;
-	private TextView t;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +19,12 @@ public class MainActivity extends Activity {
         l.setOrientation(LinearLayout.VERTICAL);
         setContentView(l);
         
-        b = new Button(this);
+        Button b = new Button(this);
         l.addView(b);
+        
+        final TextView t = new TextView(this);
+        l.addView(t);
+        
         b.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -36,9 +37,6 @@ public class MainActivity extends Activity {
 				t.setText(sb.toString());
 			}
 		});
-        
-        t = new TextView(this);
-        l.addView(t);
         
     }
 
