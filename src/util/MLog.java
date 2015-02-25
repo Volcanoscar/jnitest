@@ -11,8 +11,6 @@ public final class MLog {
 
 	private static final boolean log = true;
 
-	private static final String TAG = "TEST";
-
 	public static final void v(String msg) {
 		LOG(VERBOSE, msg);
 	}
@@ -44,7 +42,7 @@ public final class MLog {
 
 	private static void LOG(int priority, String msg) {
 		if (log)
-			Log.println(priority, TAG, msg);
+			Log.println(priority, "TEST", msg);
 	}
 
 }
